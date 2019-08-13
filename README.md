@@ -7,12 +7,15 @@ The data we will be exploring is from [RNAseqDB](https://github.com/mskcc/RNAseq
 
 The data we will be analyzing is in `data/normalized` and contains FPKM values for all genes. The different files are from RNA-seq experiments to measure gene expression in normal tissues (GTEX consortium; `gtex-` prefix) and tissues with cancer (TCGA; `tcga-` prefix). 
 
-#### You can find a description of how FPKM is calculated here. It is based on the following steps:
+#### You can find a description of how FPKM is calculated [here](https://www.rna-seqblog.com/rpkm-fpkm-and-tpm-clearly-explained/). 
+
+#### It is based on the following steps:
 
 1. Count up the total fragments in a paired-end sequencing experiment and divide that number by 1,000,000 – this is our “per million” scaling factor.
 2. Divide the read counts by the “per million” scaling factor. This normalizes for sequencing depth, giving you reads per million (RPM)
 3. Divide the RPM values by the length of the gene, in kilobases. This gives you FPKM.
 
+---
 
-#### For simplicity’s sake we can assume that the values in the data from the github repo above represents the level at which a gene is expressed in a given tissue. 
+## For simplicity’s sake we can assume that the values in the data from the github repo above represents the level at which a gene is expressed in a given tissue. 
 
